@@ -16,6 +16,7 @@ def handler(event, context):
     lista.append(cadena)
     
     data = {
+        'result':lista,
         'output': 'Hello World',
         'timestamp': datetime.datetime.utcnow().isoformat()
     }
