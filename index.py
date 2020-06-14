@@ -15,7 +15,9 @@ def handler(event, context):
             a, b = b, a+b
         lista.append(cadena)
     else:
-        lista.append(n)
+        lista = []
+        cadena = 'Error, event no tiene valor'
+        lista.append(cadena)
     
     data = {
         'result':lista,
