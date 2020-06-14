@@ -4,20 +4,15 @@ import datetime
 def handler(event, context):
     
     n = int(9)
+    lista = []
     if event is not None:
         n = int(event["queryStringParameters"]["numfib"])
-        lista = []
-        cadena = ''
         a, b = 0,1
         while a < n:
-            #print(a, end=' ')
-            cadena = cadena + str(a) + ' '
+            lista.append(a)
             a, b = b, a+b
-        lista.append(cadena)
     else:
-        lista = []
-        cadena = 'Error, event no tiene valor'
-        lista.append(cadena)
+        lista.append('No se definio un parametro para inicio')
     
     data = {
         'result':lista,
