@@ -11,13 +11,16 @@ def handler(event, context):
         while a < n:
             lista.append(a)
             a, b = b, a+b
+            
+        triangular = int((n*(n+1)/2))
+        
     else:
         lista.append('No se definio un parametro para inicio')
     
     data = {
-        'número':n,
+        'numero':n,
         'fibonacci':lista,
-        'triangular':'Triangular',
+        'triangular':triangular,
         'output': 'Hello World',
         'timestamp': datetime.datetime.utcnow().isoformat()
     }
