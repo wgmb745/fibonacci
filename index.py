@@ -3,7 +3,7 @@ import datetime
 
 def handler(event, context):
     
-    n = int(9)
+    n = int(0)
     lista = []
     if event is not None:
         n = int(event["queryStringParameters"]["numfib"])
@@ -15,7 +15,7 @@ def handler(event, context):
         lista.append('No se definio un parametro para inicio')
     
     data = {
-        'result':lista,
+        'fibonacci':lista,
         'output': 'Hello World',
         'timestamp': datetime.datetime.utcnow().isoformat()
     }
