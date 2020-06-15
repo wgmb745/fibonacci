@@ -15,7 +15,9 @@ def handler(event, context):
         lista.append('No se definio un parametro para inicio')
     
     data = {
+        'número':n,
         'fibonacci':lista,
+        'triangular':'Triangular',
         'output': 'Hello World',
         'timestamp': datetime.datetime.utcnow().isoformat()
     }
