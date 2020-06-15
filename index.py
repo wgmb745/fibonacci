@@ -4,6 +4,7 @@ import datetime
 def handler(event, context):
     
     n = int(0)
+    triangular = int(0)
     lista = []
     if event is not None:
         n = int(event["queryStringParameters"]["numfib"])
