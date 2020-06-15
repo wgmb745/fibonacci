@@ -13,7 +13,6 @@ def handler(event, context):
             a, b = b, a+b
             
         triangular = int((n*(n+1)/2))
-        
     else:
         lista.append('No se definio un parametro para inicio')
     
