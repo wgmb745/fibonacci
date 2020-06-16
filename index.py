@@ -21,6 +21,7 @@ def handler(event, context):
         'numero':n,
         'fibonacci':lista,
         'triangular':triangular,
+        'output':'Hola'
         'timestamp': datetime.datetime.utcnow().isoformat()
     }
     return {'statusCode': 200,
