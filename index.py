@@ -2,7 +2,6 @@ import json
 import datetime
 
 def handler(event, context):
-    
     n = int(0)
     triangular = int(0)
     lista = []
@@ -16,12 +15,12 @@ def handler(event, context):
         triangular = int((n*(n+1)/2))
     else:
         lista.append('No se definio un parametro para inicio')
+        triangular='Sin dato'
     
     data = {
         'numero':n,
         'fibonacci':lista,
         'triangular':triangular,
-        'output':'Hola',
         'timestamp': datetime.datetime.utcnow().isoformat()
     }
     return {'statusCode': 200,
