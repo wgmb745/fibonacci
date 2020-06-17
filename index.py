@@ -16,7 +16,7 @@ def handler(event, context):
     else:
         lista.append('No se definio un parametro para inicio')
         triangular='Sin dato'
-    fin = FIN
+    fin = 'FIN'
     
     data = {
         'numero':n,
