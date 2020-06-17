@@ -6,12 +6,11 @@ def handler(event, context):
     triangular = int(0)
     lista = []
     if event is not None:
-        n = int(event["queryStringParameters"]["numfib"])
+        n = int(event['queryStringParameters']['numfib'])
         a, b = 0,1
         while a < n:
             lista.append(a)
             a, b = b, a+b
-            
         triangular = int((n*(n+1)/2))
     else:
         lista.append('No se definio un parametro para inicio')
@@ -21,6 +20,7 @@ def handler(event, context):
         'numero':n,
         'fibonacci':lista,
         'triangular':triangular,
+        'output':'Hola mundo',
         'timestamp': datetime.datetime.utcnow().isoformat()
     }
     return {'statusCode': 200,
