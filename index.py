@@ -16,12 +16,13 @@ def handler(event, context):
     else:
         lista.append('No se definio un parametro para inicio')
         triangular='Sin dato'
+    fin = FIN
     
     data = {
         'numero':n,
         'fibonacci':lista,
         'triangular':triangular,
-        'output': 'FIN',
+        'output': fin,
         'timestamp': datetime.datetime.utcnow().isoformat()
     }
     return {'statusCode': 200,
